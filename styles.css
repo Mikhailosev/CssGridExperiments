@@ -9,13 +9,9 @@ body {
     grid-template-rows:50px 50px;
     grid-gap:3px;
     This one is better! It's like drawing an L*/
-    grid-gap: 3px;
-    grid-template-columns: repeat(12,1fr);
-    grid-template-rows:40px 600px 40px;
-    grid-template-areas:
-    "m h h h h h h h h h h h"
-    "m c c c c c c c c c c c "
-    "m f f f f f f f f f f f ";
+    grid-gap:5px;
+    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+    grid-template-rows: repeat(2,100px);
 }
 
 div{

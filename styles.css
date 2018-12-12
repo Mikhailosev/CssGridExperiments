@@ -5,15 +5,38 @@ body {
 .container{
     display: grid;
     /*Definetely not the shotres method to define rows and columns
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(2,1fr);
     grid-template-rows:50px 50px;
     grid-gap:3px;
     This one is better! It's like drawing an L*/
-    grid-template: repeat(2,50px) / repeat(3,1fr);
+    grid-gap: 3px;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows:40px 200px 40px;
 }
 
 div{
     background-color: rebeccapurple;
     text-align: center;
     border: 5px solid beige;
+}
+.header{/* First way
+    grid-column-start: 1;
+    grid-column-end: 3;
+    Second way:
+    grid-column:1/3;
+    Third way:
+    grid-column:1/span 2;
+    !!! -1 ONE MEANS TAKE ALL THE REMAINING SPACE!!!
+    */
+    grid-column: 2/-1;
+}
+.menu{
+    grid-row: 1/-1;
+}
+.content{
+    grid-column:2/-1;
+}
+.footer
+{
+    grid-column: 2/-1;
 }

@@ -1,0 +1,19 @@
+body {
+    background-color:beige;
+}
+
+.container{
+    display: grid;
+    /*Definetely not the shotres method to define rows and columns
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows:50px 50px;
+    grid-gap:3px;
+    This one is better! It's like drawing an L*/
+    grid-template: repeat(2,50px) / repeat(3,1fr);
+}
+
+div{
+    background-color: rebeccapurple;
+    text-align: center;
+    border: 5px solid beige;
+}

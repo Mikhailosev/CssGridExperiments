@@ -1,26 +1,28 @@
-body {
-    background-color:beige;
+html {
+    height: 100%;
 }
-
+body{
+    height: 90%;
+    
+}
 .container{
+    height:100%;
     display: grid;
+
     /*Definetely not the shotres method to define rows and columns
     grid-template-columns: repeat(2,1fr);
     grid-template-rows:50px 50px;
     grid-gap:3px;
     This one is better! It's like drawing an L*/
-    grid-gap:5px;
-    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+    grid-gap: 5px;
+    grid-template-columns: [main-start] 1fr [content-start] 5fr [content-end main-end];
     /*fixes the issue with the rows    */
-    grid-auto-rows: 100px;
+    grid-template-rows:[main-start] 40px [content-start] auto [content-end] 40px[main-end];
 }
 
-div{
-    background-color: rebeccapurple;
-    text-align: center;
-    border: 5px solid beige;
-}
-.header{/* First way
+
+.header {
+    /* First way
     grid-column-start: 1;
     grid-column-end: 3;
     Second way:
@@ -29,17 +31,25 @@ div{
     grid-column:1/span 2;
     !!! -1 ONE MEANS TAKE ALL THE REMAINING SPACE!!!
     */
-    grid-area:h;
+    background-color: aqua;
+    grid-column: main;
+    font: 30pt sans-serif;
 }
-.menu{
-    grid-area: m;
+
+.menu {
+    background-color: coral;
+    font: 30pt sans-serif;
 }
-.content{
-    grid-area: c;
-    
+
+.content {
+    background-color: lightblue;
+    grid-area: content;
+    font: 30pt sans-serif;
 }
-.footer
-{
-    grid-area: f;
+
+.footer {
+    background-color: burlywood;
+    grid-column: main;
+    font: 30pt sans-serif;
 
 }
